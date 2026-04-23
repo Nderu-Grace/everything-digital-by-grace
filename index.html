@@ -252,8 +252,100 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(250,248,244,
 .cta-strip h2{font-family:var(--serif);font-size:clamp(2rem,4vw,2.9rem);font-weight:900;line-height:1.12;margin-bottom:1rem;letter-spacing:-0.02em}
 .cta-strip p{color:var(--muted);font-size:1rem;line-height:1.82;margin-bottom:2rem}
 
+/* ACADEMY PAGE */
+.academy-banner{background:linear-gradient(135deg,var(--ink) 0%,#2C1F1A 50%,#3D1F10 100%);padding:5rem 2.5rem 4rem;position:relative;overflow:hidden}
+.academy-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(200,80,42,0.2) 0%,transparent 60%)}
+.academy-banner-inner{max-width:920px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center}
+.academy-badge-hero{background:var(--accent);border-radius:20px;padding:2rem 2.5rem;text-align:center;flex-shrink:0;min-width:180px}
+.academy-badge-hero .fee{font-family:var(--serif);font-size:2.5rem;font-weight:900;color:#fff;line-height:1}
+.academy-badge-hero .fee-label{font-size:0.75rem;color:rgba(255,255,255,0.75);text-transform:uppercase;letter-spacing:0.07em;margin-top:0.35rem}
+.academy-badge-hero .duration{font-size:0.82rem;color:rgba(255,255,255,0.65);margin-top:0.85rem;padding-top:0.85rem;border-top:1px solid rgba(255,255,255,0.2)}
+.course-meta{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1.5rem}
+.meta-pill{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.75);font-size:0.78rem;padding:0.35rem 0.85rem;border-radius:999px}
+.week-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:1.5rem;margin:2.5rem 0}
+.week-card{background:var(--white);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:transform 0.3s,border-color 0.3s}
+.week-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.week-header{background:var(--ink);padding:1.25rem 1.75rem;display:flex;align-items:center;gap:1rem}
+.week-num{font-family:var(--serif);font-size:1.8rem;font-weight:900;color:var(--accent);line-height:1;flex-shrink:0}
+.week-header-text h3{font-family:var(--serif);font-size:1rem;font-weight:700;color:#fff;margin-bottom:0.15rem}
+.week-header-text p{font-size:0.78rem;color:rgba(255,255,255,0.55);line-height:1.5}
+.week-sessions{padding:1.25rem 1.75rem;display:flex;flex-direction:column;gap:0.9rem}
+.session-item{display:flex;gap:0.75rem;align-items:flex-start;padding-bottom:0.9rem;border-bottom:1px solid var(--border)}
+.session-item:last-child{border-bottom:none;padding-bottom:0}
+.session-day{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);flex-shrink:0;padding-top:0.15rem;min-width:28px}
+.session-content h4{font-size:0.88rem;font-weight:600;color:var(--ink);margin-bottom:0.2rem}
+.session-content p{font-size:0.8rem;color:var(--muted);line-height:1.65}
+.outcomes-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin:2rem 0}
+.outcomes-list li{font-size:0.87rem;color:var(--muted);display:flex;align-items:flex-start;gap:0.6rem;line-height:1.65}
+.outcomes-list li::before{content:'✓';color:var(--accent);font-weight:700;flex-shrink:0}
+.pricing-split{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2rem 0}
+.pay-option{background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:2rem;transition:border-color 0.3s}
+.pay-option:hover{border-color:var(--accent)}
+.pay-option.recommended{border-color:var(--accent);background:var(--accent-light)}
+.pay-rec-badge{display:inline-block;background:var(--accent);color:#fff;font-size:0.67rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.25rem 0.75rem;border-radius:999px;margin-bottom:0.75rem}
+.pay-option h4{font-family:var(--serif);font-size:1.1rem;font-weight:700;margin-bottom:0.35rem}
+.pay-option .pay-amount{font-family:var(--serif);font-size:1.6rem;font-weight:900;color:var(--accent);margin-bottom:0.35rem}
+.pay-option p{font-size:0.84rem;color:var(--muted);line-height:1.7}
+.curriculum-sources{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
+.source-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center;transition:border-color 0.3s}
+.source-card:hover{border-color:var(--accent)}
+.source-icon{width:44px;height:44px;border-radius:12px;border:1.5px solid var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 0.85rem}
+.source-icon svg{width:20px;height:20px;stroke:var(--accent);stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.source-card h4{font-family:var(--serif);font-size:0.95rem;font-weight:700;margin-bottom:0.3rem}
+.source-card p{font-size:0.79rem;color:var(--muted);line-height:1.65}
+@media(max-width:900px){
+  .academy-banner-inner{grid-template-columns:1fr}
+  .academy-badge-hero{display:none}
+  .week-grid{grid-template-columns:1fr}
+  .outcomes-list{grid-template-columns:1fr}
+  .pricing-split{grid-template-columns:1fr}
+  .curriculum-sources{grid-template-columns:1fr}
+}
+
 footer{background:var(--ink);color:rgba(255,255,255,0.45);text-align:center;padding:3rem 2rem;font-size:0.84rem}
 footer strong{color:#fff;font-family:var(--serif);font-size:0.97rem}
+/* ACADEMY */
+.academy-overview{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin:3rem 0}
+.overview-table{width:100%;border-collapse:collapse;font-size:0.88rem}
+.overview-table tr{border-bottom:1px solid var(--border)}
+.overview-table td{padding:0.75rem 0;color:var(--muted);line-height:1.6;vertical-align:top}
+.overview-table td:first-child{font-weight:600;color:var(--ink);width:45%;padding-right:1rem}
+.overview-stat{background:var(--accent);color:#fff;border-radius:16px;padding:2rem;display:flex;flex-direction:column;gap:1rem}
+.overview-stat-item{border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:1rem}
+.overview-stat-item:last-child{border-bottom:none;padding-bottom:0}
+.overview-stat-num{font-family:var(--serif);font-size:2rem;font-weight:900;display:block;line-height:1}
+.overview-stat-lbl{font-size:0.73rem;opacity:0.8;text-transform:uppercase;letter-spacing:0.07em;margin-top:0.2rem}
+.week-block{margin-bottom:1.5rem;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:box-shadow 0.3s}
+.week-block:hover{box-shadow:0 8px 32px rgba(0,0,0,0.07)}
+.week-header{background:var(--ink);padding:1.25rem 1.75rem}
+.week-num{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(200,80,42,0.8);margin-bottom:0.2rem}
+.week-header h3{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:#fff;letter-spacing:-0.01em;margin-bottom:0.2rem}
+.week-goal{font-size:0.8rem;color:rgba(255,255,255,0.5)}
+.session-row{display:grid;grid-template-columns:90px 1fr;border-bottom:1px solid var(--border)}
+.session-row:last-child{border-bottom:none}
+.session-day{padding:1.25rem;background:var(--light);display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--border)}
+.session-day span{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent)}
+.session-day strong{font-size:0.83rem;font-weight:600;color:var(--ink);margin-top:0.15rem;display:block}
+.session-content{padding:1.25rem 1.5rem;background:var(--white)}
+.session-content h4{font-family:var(--serif);font-size:0.95rem;font-weight:700;margin-bottom:0.35rem;letter-spacing:-0.01em}
+.session-content p{font-size:0.82rem;color:var(--muted);line-height:1.7}
+.session-tag{display:inline-block;font-size:0.64rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;padding:0.2rem 0.6rem;border-radius:999px;background:var(--accent-light);color:var(--accent);margin-top:0.5rem}
+.outcomes-list{display:grid;grid-template-columns:1fr 1fr;gap:0.65rem;margin:1.5rem 0}
+.outcome-item{display:flex;align-items:flex-start;gap:0.6rem;font-size:0.86rem;color:var(--muted);line-height:1.7}
+.outcome-item svg{width:16px;height:16px;stroke:var(--accent);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:0.18rem}
+.pay-option{background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:1.75rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;margin-bottom:1rem;transition:border-color 0.3s}
+.pay-option:hover{border-color:var(--accent)}
+.pay-option.highlight{border-color:var(--accent);background:var(--accent-light)}
+.pay-label{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:0.25rem}
+.pay-title{font-family:var(--serif);font-size:1.05rem;font-weight:700}
+.pay-price{font-family:var(--serif);font-size:2rem;font-weight:900;color:var(--accent);white-space:nowrap;text-align:right}
+.pay-sub{font-size:0.75rem;color:var(--muted);margin-top:0.1rem}
+@media(max-width:900px){
+  .academy-overview{grid-template-columns:1fr}
+  .outcomes-list{grid-template-columns:1fr}
+  .pay-option{flex-direction:column;align-items:flex-start;gap:1rem}
+  .session-row{grid-template-columns:72px 1fr}
+}
 .wa{position:fixed;bottom:2rem;right:2rem;z-index:999;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.3);transition:transform 0.2s;text-decoration:none}
 .wa:hover{transform:scale(1.1)}
 
@@ -301,6 +393,7 @@ footer strong{color:#fff;font-family:var(--serif);font-size:0.97rem}
     <button class="nav-link" onclick="goPage('about')">The Strategist</button>
     <button class="nav-link" onclick="goPage('why')">The Edge</button>
     <button class="nav-link" onclick="goPage('services')">The Playbook</button>
+    <button class="nav-link" onclick="goPage('academy')">The Academy</button>
     <button class="nav-link" onclick="goPage('quote')">Let's Build</button>
   </div>
   <button class="nav-cta" onclick="goPage('quote')">Let's Build</button>
@@ -313,6 +406,7 @@ footer strong{color:#fff;font-family:var(--serif);font-size:0.97rem}
   <button class="mob-link" onclick="goPage('about');closeMob()">The Strategist</button>
   <button class="mob-link" onclick="goPage('why');closeMob()">The Edge</button>
   <button class="mob-link" onclick="goPage('services');closeMob()">The Playbook</button>
+  <button class="mob-link" onclick="goPage('academy');closeMob()">The Academy</button>
   <button class="mob-link" onclick="goPage('quote');closeMob()">Let's Build</button>
   <button class="mob-cta" onclick="goPage('quote');closeMob()">Let's Build →</button>
 </div>
@@ -848,6 +942,257 @@ footer strong{color:#fff;font-family:var(--serif);font-size:0.97rem}
 </div>
 
 
+<!-- ══ THE ACADEMY ══ -->
+<div class="page" id="page-academy">
+
+  <div class="academy-banner">
+    <div class="academy-banner-inner">
+      <div>
+        <div class="page-banner-label">The Academy</div>
+        <h1 style="font-family:var(--serif);font-weight:900;font-size:clamp(2.4rem,5.5vw,4rem);line-height:1.07;letter-spacing:-0.025em;color:#fff;margin-bottom:0.85rem">Digital Marketing<br><em style="font-style:italic;color:var(--accent)">Training Programme</em></h1>
+        <p style="font-size:1rem;color:rgba(255,255,255,0.65);max-width:580px;line-height:1.85">A forward-looking 4-week live training programme built for the AI era — reflecting how marketing is actually practised today. Developed and delivered by Everything Digital by Grace.</p>
+        <div class="course-meta">
+          <span class="meta-pill">4 Weeks</span>
+          <span class="meta-pill">12 Live Sessions</span>
+          <span class="meta-pill">24 Contact Hours</span>
+          <span class="meta-pill">Tue – Thu Evenings</span>
+          <span class="meta-pill">Virtual Classes</span>
+          <span class="meta-pill">Beginner to Intermediate</span>
+        </div>
+      </div>
+      <div class="academy-badge-hero">
+        <div class="fee">KES 50K</div>
+        <div class="fee-label">Course Fee</div>
+        <div class="duration">4 weeks · 1-on-1<br>Personalised instruction</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+
+    <div class="section-label reveal">Course Overview</div>
+    <h2 class="reveal rd1">Not a traditional course.<br>A future-ready programme.</h2>
+    <p class="section-body reveal rd2">Designed for individuals entering digital marketing, this programme delivers practical, career-ready skills across every core discipline — built for the AI era. From SEO and paid advertising to Answer Engine Optimisation (AEO) and AI-powered workflows, every module reflects how marketing is actually practised today. AI is not optional here — it is fundamental.</p>
+
+    <div class="section-label reveal" style="margin-top:3rem">Learning Outcomes</div>
+    <h2 class="reveal rd1">What you'll walk away with</h2>
+    <ul class="outcomes-list reveal rd2">
+      <li>Explain digital marketing and how AI is reshaping every channel</li>
+      <li>Optimise content for both search engines (SEO) and AI answer engines (AEO)</li>
+      <li>Use AI tools to research, write, and distribute content faster and smarter</li>
+      <li>Run and manage paid campaigns on Google Ads and Meta</li>
+      <li>Build social media strategies that leverage AI for content and scheduling</li>
+      <li>Execute email campaigns using automation and AI personalisation</li>
+      <li>Understand performance marketing and measure ROI across all channels</li>
+      <li>Analyse campaign data using GA4 and AI-powered dashboards</li>
+      <li>Understand how AI is changing consumer search behaviour</li>
+      <li>Build a complete digital marketing strategy fit for the AI era</li>
+    </ul>
+
+    <div class="section-label reveal" style="margin-top:4rem">The Curriculum</div>
+    <h2 class="reveal rd1">Four weeks. Every discipline. AI-powered.</h2>
+    <p class="section-body reveal rd2">12 live evening sessions — practical, focused, and built around real campaign scenarios.</p>
+
+    <div class="week-grid">
+
+      <div class="week-card reveal from-left">
+        <div class="week-header">
+          <div class="week-num">01</div>
+          <div class="week-header-text">
+            <h3>Foundations of Digital Marketing in the AI Era</h3>
+            <p>Understanding modern digital marketing and building an AI-discoverable online presence</p>
+          </div>
+        </div>
+        <div class="week-sessions">
+          <div class="session-item">
+            <div class="session-day">Tue</div>
+            <div class="session-content">
+              <h4>Digital Marketing in the AI Era</h4>
+              <p>How AI has changed consumer behaviour and search. The modern marketing funnel. Key channels in 2024/25. AI tools: ChatGPT, Claude, Gemini, Canva AI</p>
+            </div>
+          </div>
+          <div class="session-item">
+            <div class="session-day">Wed</div>
+            <div class="session-content">
+              <h4>Building an Online Presence for AI Discovery</h4>
+              <p>Websites, Google Business Profile, USP. Introduction to AEO — how ChatGPT, Perplexity, and Google SGE are changing how people find businesses online</p>
+            </div>
+          </div>
+          <div class="session-item">
+            <div class="session-day">Thu</div>
+            <div class="session-content">
+              <h4>SEO + AEO: Ranking in Search & AI Answers</h4>
+              <p>On-page and off-page SEO. AEO deep dive: optimising for featured snippets and AI Overviews. Practical: audit a real website for both SEO and AEO readiness</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="week-card reveal from-right">
+        <div class="week-header">
+          <div class="week-num">02</div>
+          <div class="week-header-text">
+            <h3>Performance Marketing & Paid Advertising</h3>
+            <p>Google Ads as the foundation, Meta as the complement — both powered by AI</p>
+          </div>
+        </div>
+        <div class="week-sessions">
+          <div class="session-item">
+            <div class="session-day">Tue</div>
+            <div class="session-content">
+              <h4>Introduction to Performance Marketing</h4>
+              <p>CPC, CPM, CPA, CTR, ROAS, ROI. AI-powered bidding and Smart Campaigns. First-party data and the cookieless future</p>
+            </div>
+          </div>
+          <div class="session-item">
+            <div class="session-day">Wed</div>
+            <div class="session-content">
+              <h4>Google Ads — Search Campaigns & AI Bidding</h4>
+              <p>Account structure, keyword research, ad copywriting with AI, Smart Bidding, Performance Max. Practical: build a sample search campaign</p>
+            </div>
+          </div>
+          <div class="session-item">
+            <div class="session-day">Thu</div>
+            <div class="session-content">
+              <h4>Display & Video Ads + Meta Ads Overview</h4>
+              <p>Google Display Network, YouTube ads, remarketing. Meta Ads campaign structure and targeting. Google vs Meta — when to use which and why</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="week-card reveal from-left">
+        <div class="week-header">
+          <div class="week-num">03</div>
+          <div class="week-header-text">
+            <h3>Social Media, Content & Email in the AI Era</h3>
+            <p>AI-powered strategies to build audiences and create content at scale</p>
+          </div>
+        </div>
+        <div class="week-sessions">
+          <div class="session-item">
+            <div class="session-day">Tue</div>
+            <div class="session-content">
+              <h4>Social Media Marketing + AI Content Creation</h4>
+              <p>Platform deep dives: Instagram, LinkedIn, TikTok, X, Facebook. Using Claude, ChatGPT, and Canva AI to create graphics, captions, and video scripts at scale</p>
+            </div>
+          </div>
+          <div class="session-item">
+            <div class="session-day">Wed</div>
+            <div class="session-content">
+              <h4>Content Marketing + AI-Powered Production</h4>
+              <p>Inbound methodology, blog strategy with AI, video content, prompt engineering basics. Practical: build a full content plan using AI tools</p>
+            </div>
+          </div>
+          <div class="session-item">
+            <div class="session-day">Thu</div>
+            <div class="session-content">
+              <h4>Email Marketing + AI Personalisation</h4>
+              <p>List building and segmentation. Using AI to write subject lines, body copy, and CTAs. Automation workflows and A/B testing with AI insights</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="week-card reveal from-right">
+        <div class="week-header">
+          <div class="week-num">04</div>
+          <div class="week-header-text">
+            <h3>Analytics, AI Strategy & Your Capstone</h3>
+            <p>Data literacy, e-commerce, and your complete AI-era strategy</p>
+          </div>
+        </div>
+        <div class="week-sessions">
+          <div class="session-item">
+            <div class="session-day">Tue</div>
+            <div class="session-content">
+              <h4>Analytics, GA4 & AI-Powered Insights</h4>
+              <p>GA4 overview, key metrics, UTM parameters, goal setting. Using AI to interpret data and surface insights. Predictive analytics and AI-driven reporting</p>
+            </div>
+          </div>
+          <div class="session-item">
+            <div class="session-day">Wed</div>
+            <div class="session-content">
+              <h4>E-Commerce, CRO & AI-Driven Personalisation</h4>
+              <p>Google Shopping, retargeting, dynamic ads. Conversion rate optimisation basics. How AI is powering personalised shopping experiences</p>
+            </div>
+          </div>
+          <div class="session-item">
+            <div class="session-day">Thu</div>
+            <div class="session-content">
+              <h4>Capstone: Your AI-Era Digital Marketing Strategy</h4>
+              <p>Present a complete strategy: SEO + AEO plan, Google Ads, Meta Ads brief, social and content plan, email automation sequence, KPIs, and how AI tools will be used throughout</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-label reveal" style="margin-top:4rem">Investment</div>
+    <h2 class="reveal rd1">Course Fee — KES 50,000</h2>
+    <p class="section-body reveal rd2">Competitively priced against the Kenyan market — with one key difference: this is personalised, 1-on-1 instruction. Not a group class.</p>
+
+    <div class="pricing-split reveal rd2">
+      <div class="pay-option recommended">
+        <div class="pay-rec-badge">Option A</div>
+        <h4>Full Payment</h4>
+        <div class="pay-amount">KES 50,000</div>
+        <p>Pay in full before the course begins. Secures your spot immediately.</p>
+      </div>
+      <div class="pay-option">
+        <div style="margin-bottom:0.75rem;height:22px"></div>
+        <h4>Split Payment</h4>
+        <div class="pay-amount">KES 25,000 × 2</div>
+        <p>50% deposit to confirm enrolment, remaining 50% at the start of Week 3.</p>
+      </div>
+    </div>
+
+    <div class="section-label reveal" style="margin-top:4rem">Why This Programme</div>
+    <h2 class="reveal rd1">What makes this different</h2>
+    <div class="why-grid" style="margin-top:1.5rem">
+      <div class="why-card reveal rd1">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+        <h3>1-on-1 Personalised Instruction</h3>
+        <p>Not a group class. Every session is tailored to your pace, your goals, and your specific context.</p>
+      </div>
+      <div class="why-card reveal rd2">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <h3>Evening Scheduling</h3>
+        <p>Tuesday, Wednesday, and Thursday evenings — so you can learn without disrupting your current commitments.</p>
+      </div>
+      <div class="why-card reveal rd3">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3>Real-World Experience</h3>
+        <p>Taught by a practitioner — not just a trainer. Every module is grounded in what actually works in live campaigns.</p>
+      </div>
+      <div class="why-card reveal rd1">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg></div>
+        <h3>AI-First Curriculum</h3>
+        <p>AI tools are embedded into every week — because that is how modern marketers actually work, not an afterthought.</p>
+      </div>
+      <div class="why-card reveal rd2">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <h3>Strategy You Can Use Immediately</h3>
+        <p>You leave Week 4 with a complete, practical digital marketing strategy for a real brand — not just a certificate.</p>
+      </div>
+      <div class="why-card reveal rd3">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div>
+        <h3>Competitive Pricing</h3>
+        <p>KES 50,000 for 1-on-1 instruction in a market where group courses cost the same — or significantly more.</p>
+      </div>
+    </div>
+
+    <div style="background:var(--ink);border-radius:20px;padding:3rem;text-align:center;margin-top:3rem" class="reveal">
+      <div class="section-label" style="color:rgba(200,80,42,0.7);margin-bottom:0.5rem">Enrol Now</div>
+      <h3 style="font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:#fff;line-height:1.15;letter-spacing:-0.02em;margin-bottom:0.75rem">Ready to go from scrolling<br>to strategising?</h3>
+      <p style="font-size:0.93rem;color:rgba(255,255,255,0.6);max-width:480px;margin:0 auto 2rem;line-height:1.8">Limited spots available. Reach out to confirm your seat, ask any questions, or discuss a start date that works for you.</p>
+      <button class="btn-primary" onclick="openEmail('Academy Enrolment — KES 50,000')">Reserve Your Spot →</button>
+    </div>
+
+  </div>
+</div>
+
 <footer>
   <p><strong>Everything Digital by Grace</strong></p>
   <p style="margin-top:0.4rem;font-size:0.8rem">Paid Media · Email · Content · Design · Social · Analytics</p>
@@ -868,7 +1213,7 @@ var svcs={
   reports:{label:'Performance Analytics',title:'Performance Analytics',lead:'Digital performance has been analysed and reported on since 2020 — using GA4, Meta Business Suite, Agorapulse, Reelmedia, and Google Alerts. These reports don\'t just tell you what happened. They tell you why it happened and exactly what actions are being taken as a result.',items:['Channel-by-channel summary: paid, organic, email, and social in one clean document','KPI dashboard: agreed metrics tracked against targets, month-over-month','Wins and what worked: campaigns, content, and decisions that moved the needle','Gaps and what didn\'t: honest analysis of underperformance with context and cause','Next 30-day focus: specific recommendations for where to direct attention and budget','Delivered in a shareable format your wider team or stakeholders can actually read'],quote:'Most marketing reports are full of impressive charts that don\'t mean anything. These tell you what happened, why it happened, and what we\'re doing about it next month.'}
 };
 
-var navIdx={home:0,about:1,why:2,services:3,quote:4};
+var navIdx={home:0,about:1,why:2,services:3,academy:4,quote:5};
 function goPage(id){
   document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});
   document.querySelectorAll('.nav-link,.mob-link').forEach(function(l){l.classList.remove('active')});
